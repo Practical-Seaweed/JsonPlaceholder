@@ -1,15 +1,28 @@
+/* this also makes it look nice for my card on page todo */
 .card {
     margin: auto;
     background-color: #aabaf7;
     border: 3px solid black;
 }
+/* this makes everything look nice */
 body {
     background-color: #1c3797;
 }
+/* this is to move the input to the middle */
 #todoBlock{
     text-align: center;
     color: white;
 }
+/* this is the results on page todo */
 #results{
     color: white;
+}
+/* this is for my table, and it hides my table */
+#dataOverall{
+    display:  none;
+}
+/* this is that line underneath the dropdown */
+hr{
+    color: rgb(34, 120, 241);
+    border: 4px solid black;
 }
