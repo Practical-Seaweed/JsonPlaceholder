@@ -1,0 +1,12 @@
+.card {
+    margin: auto;
+    background-color: #aabaf7;
+    border: 3px solid black;
+}
+body {
+    background-color: #1c3797;
+}
+#todoBlock{
+    text-align: center;
+    color: white;
+}
