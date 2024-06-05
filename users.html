@@ -12,48 +12,50 @@
 
 <body>
 
-        <!-- this is my navabar -->
-        <nav class="navbar bg-primary navbar-expand-lg" data-bs-theme="dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-link" href="index.html">Home</a>
-                        <a class="nav-link" href="todo.html">Todo</a>
-                        <a class="nav-link active" aria-current="page" href="users.html">Users</a>
-                    </div>
+    <!-- this is my navabar -->
+    <nav class="navbar bg-primary navbar-expand-lg" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="todo.html">Todo</a>
+                    <a class="nav-link active" aria-current="page" href="users.html">Users</a>
                 </div>
             </div>
-        </nav>
-
-        <!-- this is will be my dropdown of users -->
-        <select id="userNames" name="userNames" class="w-25 mx-auto mt-2 form-select"></select>
-
-        <hr>
-
-
-        <!-- this is my table -->
-        <div class="pb-4 mt-4 container" id="usersInfo">
-            <table id="dataOverall" class="mt-4 table table-dark table-striped table-bordered table-hover">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Username</th>
-                        <th>Email</th>
-                        <th>Zip Code</th>
-                        <th>Phone</th>
-                        <th>Website</th>
-                    </tr>
-                </thead>
-                <tbody id="dataUserInfo">
-                </tbody>
-            </table>
         </div>
+    </nav>
 
+    <!-- this is will be my dropdown of users -->
+    <div class="py-4 container">
+    <select id="userNamesDP" name="userNames" class="w-50 mx-auto mt-2 form-select"></select>
+    </div>
+    <hr>
+
+
+    <!-- this is my table -->
+    <div class="pb-4 mt-4 container" id="usersInfo">
+        <table id="tableOverall" class="mt-4 table table-dark table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Zip Code</th>
+                    <th>Phone</th>
+                    <th>Website</th>
+                </tr>
+            </thead>
+            <tbody id="userTableInfo">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="scripts/users.js"></script>
 </body>
 
 </html>
