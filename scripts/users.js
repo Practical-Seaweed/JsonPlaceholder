@@ -1,7 +1,13 @@
 "use strict";
 
-let theDropdown = document.querySelector("#userNamesDP");
-let userTableInfo = document.querySelector("#userTableInfo");
+window.onload = async () => {
+    try {
+        let userData = await getUserData();
+        makeDaTable(userData);
+    }catch (error){
+        console.error(error);
+    }
+};
 
 async function getUserData() {
     try {
@@ -12,41 +18,23 @@ async function getUserData() {
         let data = await response.json();
         return data;
     } catch (error) {
-        console.log(error);
+        throw new Error(`Error fetching user data: ${error.message}`);
     }
 }
 
-async function buildDropdown() {
-    let users = await getUserData();
-    users.forEach((user) => {
-        let newOption = document.createElement("option");
-        newOption.textContent = user.name;
-        newOption.value = user.id;
-        theDropdown.appendChild(newOption);
+function makeDaTable(users) {
+    let tableBody = document.getElementById('userTableInfo');
+    tableBody.innerHTML = ''; // Clear existing table rows
+    users.forEach(user => {
+        let row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${user.name}</td>
+            <td>${user.username}</td>
+            <td>${user.email}</td>
+            <td>${user.address.zipcode}</td>
+            <td>${user.phone}</td>
+            <td>${user.website}</td>
+        `;
+        tableBody.appendChild(row);
     });
 }
-
-async function buildTable(userId) {
-    let users = await getUserData();
-    userTableInfo.innerHTML = ""; // Clear previous table data
-    let selectedUser = users.find(user => user.id == userId);
-    if(selectedUser) {
-        let row = document.createElement("tr");
-        row.innerHTML = `
-            <td>${selectedUser.name}</td>
-            <td>${selectedUser.username}</td>
-            <td>${selectedUser.email}</td>
-            <td>${selectedUser.address.zipcode}</td>
-            <td>${selectedUser.phone}</td>
-            <td>${selectedUser.website}</td>
-        `;
-        userTableInfo.appendChild(row);
-    }
-}
-
-buildDropdown();
-
-theDropdown.addEventListener('change', function() {
-    let selectedUserId = this.value;
-    buildTable(selectedUserId);
-});

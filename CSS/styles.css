@@ -17,10 +17,6 @@ body {
 #results{
     color: white;
 }
-/* this is for my table, and it hides my table */
-#tableOverall{
-    display:  none;
-}
 /* this is that line underneath the dropdown */
 hr{
     color: rgb(34, 120, 241);
