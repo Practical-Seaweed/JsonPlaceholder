@@ -2,7 +2,7 @@
 
 window.onload = () => {
 
-    console.log("heh im in your edit-todo.js >:D")
+    console.log("heh im in your new-todo.js >:D")
 
     const createCommentForm = document.querySelector("#createCommentForm");
     createCommentForm.addEventListener("submit", createAComment);
