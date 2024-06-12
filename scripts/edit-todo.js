@@ -10,7 +10,13 @@ window.onload = () => {
 
     const updateCommentForm = document.querySelector("#updateCommentForm");
 
-    updateCommentForm.addEventListener("submit", updateAComment);
+    updateCommentForm.addEventListener("submit", updateATodo);
+
+    const cancelButton = document.querySelector("#cancelButton");
+
+    cancelButton.addEventListener("click", () => {
+        window.location.href = "index.html"
+    })
 }
 
 const populateUpdateForm = async (event) => {
@@ -33,7 +39,7 @@ const getSingleComment = async (commentId) => {
 
 }
 
-const updateAComment = async (event) => {
+const updateATodo = async (event) => {
     event.preventDefault();
 
     try {
