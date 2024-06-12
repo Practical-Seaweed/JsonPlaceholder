@@ -28,8 +28,23 @@ hr{
     text-align: center;
 }
 
+h1, h3 {
+    color: white;
+    text-align: center;
+}
+
 p {
     color: white;
     text-align: center;
     margin-top: 20px;
+}
+
+#getCommentToEdit {
+    color: white;
+    text-align: center;
+}
+
+#updateCommentForm {
+    color:  white;
+    text-align: center;
 }

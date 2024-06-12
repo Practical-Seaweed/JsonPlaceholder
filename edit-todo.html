@@ -26,17 +26,56 @@
                     <a class="nav-link" href="todo.html">ToDo</a>
                     <a class="nav-link" href="users.html">Users</a>
                     <a class="nav-link" href="new-todo.html">New ToDo</a>
-                    <a class="nav-link active" aria-current="page"  href="edit-todo.html">Edit ToDo</a>
+                    <a class="nav-link active" aria-current="page" href="edit-todo.html">Edit ToDo</a>
                 </div>
             </div>
         </div>
     </nav>
+
+    <!-- form to update a comment -->
+    <div>
+        <h1>Update Comment Form</h1>
+
+        <h3>What comment do you want to edit?</h3>
+        <!-- form to get the comment to edit -->
+        <div>
+            <form id="getCommentToEdit">
+                <div>
+                    <label for="commentId">Comment ID:</label>
+                    <input type="text" id="commentId" name="commentId" value="" required>
+                    <button>Get Comment To Update</button>
+                </div>
+            </form>
+        </div>
+
+        <hr>
+
+        <form id="updateCommentForm">
+            <!-- create hidden field so we have access to the ID of the record we want to update -->
+            <input type="hidden" name="id" id="id" value="">
+            <div>
+                <label for="body">User Id:</label>
+                <input type="text" name="userId" id="userId" value="">
+            </div>
+            <div>
+                <label for="name">Title:</label>
+                <input type="text" name="title" id="title" value="">
+            </div>
+            <div>
+                <label for="postId">Completed ?:</label>
+                <input type="text" name="completed" id="completed" value="">
+            </div>
+            <button>Update Comment</button>
+        </form>
+    </div>
 
 
 
 
     <div id="theResults">
     </div>
+
+    <script src="./scripts/edit-todo.js"></script>
 </body>
 
 </html>
